@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulier events</title>
+</head>
+<body>
+    <form name="formulier" action="mailto:email@adres.nl" name="klantformulier" method="post" onsubmit="return(formcheck(this));">
+        <fieldset>
+            <legend>Bestelformulier</legend>
+            <label for="man">Man: </label>
+                <input type="radio" name="geslacht" id="man" value="m" onchange="if(document.klantformulier.man.checked == true)
+                {
+                    alert('Welkom meneer!');
+                }" />
+            <label for="vrouw">Vrouw: </label>
+                <input type="radio" name="geslacht" id="vrouw" value="v" onchange="if(document.klantformulier.vrouw.checked == true)
+                {
+                    alert('Welkom mevrouw!');
+                }" />
+                <br>
+                <input type="text" name="voornaam" id="voornaam" placeholder="Vul uw voornaam in"><br>
+                <input type="text" name="achternaam" id="achternaam" placeholder="Vul uw achternaam in"><br>
+                <input type="text" name="leeftijd" id="leeftijd" placeholder="Vul uw leeftijd in" ><br>
+                <input type="text" name="woonplaats" id="woonplaats" placeholder="Vul uw woonplaats in"><br>
+                <input type="text" name="postcode" id="postcode" placeholder="Vul uw postcode in"><br>
+                <input type="text" name="email" id="email" placeholder="Vul uw email in"><br>
+                <input type="text" name="mobiel" id="mobiel" placeholder="Vul uw 06 in"><br>
+                <input type="text" name="wachtwoord" id="wachtwoord" placeholder="Vul uw wachtwoord in"><br>
+                <input type="text" name="nogmaals" id="nogmaals" placeholder="Wachtwoord nogmaals"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Bestelling</legend>
+            Smartphone:
+            <input type="checkbox" name="smartphone" id="smartphone" value="s" onchange="if(document.klantformulier.gadget[0].checked)
+            {
+                alert('Smartphone besteld!');
+            }" onclick="alert('Smartphone besteld');" /><br>
+            Laptop:
+            <input type="checkbox" name="laptop" id="laptop" value="laptop" onchange="if(document.klantformulier.gadget[1].checked)
+            {
+                alert('Laptop besteld!');
+            }"  onclick="alert('Laptop besteld');" /><br>
+            Tablet:
+            <input type="checkbox" name="tablet" id="tablet" value="tablet" onchange="if(document.klantformulier.gadget[2].checked)
+            {
+                alert('Laptop besteld!');
+            }"  onclick="alert('Tablet besteld');" /><br>
+            
+            <select name="dag" id="dag">
+                <option value="0">Dag</option>
+                <option value="Maandag">Maandag</option>
+                <option value="Dinsdag">Dinsdag</option>
+                <option value="Woensdag">Woensdag</option>
+                <option value="Donderdag">Donderdag</option>
+                <option value="Vrijdag">Vrijdag</option>
+                <option value="Zaterdag">Zaterdag</option>
+            </select><br> <br>
+            <select>
+                <input type="text" placeholder="Bezorgmethode" name="bezorg" id="bezorg" list="merken">
+                    <datalist id="merken">
+                        <option value="PostNL"></option>
+                        <option value="DHL"></option>
+                        <option value="Pick up point"></option>
+                    </datalist> <br> <br> 
+            </select>
+            <input type="submit" id="submit" name="submit" value="Verzenden" onmouseover="style.backgroundColor='green'" onmouseout="style.backgroundColor='gray'" />
+            <input type="password" id="password" placeholder="Vul uw wachtwoord in" onkeyup="herhalen()" />
+        </fieldset>
+    </form>
+
+    <script src="formulier-events.js"></script>
+</body>
+</html>
