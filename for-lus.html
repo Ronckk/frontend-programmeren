@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (x = 0; x < 3; x++) {
+            document.write("<br>Dit is lus: " + x);
+        }
+        var student = new Array(
+            'Zakaria', 'Albert', 'Hamsa', 'Mike', 'Pieter', 'Harry');
+        for(x=0; x < student.length; x++) {
+            document.write('<br>Element '+ x +' is ' + student[x]);
+        }
+
+        function lus_even(){
+            var student = new Array("zak", "alb", "ham", "mik", "Pie", "Har");
+            for (let z = 0; z < student.length; z++) {
+                var check = Number.isInteger(z/2)
+            if(check == true){
+                document.write("<br>element: " + z + "=" + student[z])
+            }
+        }
+    }
+    lus_even();
+    </script>
+</body>
+</html>
