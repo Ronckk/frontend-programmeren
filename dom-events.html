@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom events</title>
+    <script src="dom-events.js"></script>
+    <script>
+        document.write( 
+            '<form name="klok"> ' +
+            '<input type="text" ' +
+            'name="display" ' + 
+            'size="8" ' +
+            'style="background-color:#30CE28;font-size:44px"></form>');
+        var nu = new Date();
+        var uur = nu.getHours();
+        var min = nu.getMinutes();
+        var sec = nu.getSeconds();
+        var alterneren = 0;
+
+        function showKlok() {
+            min = ((min < 10) ? "0" : "") + min;
+            if (alterneren) {
+            document.klok.display.value = uur + ":" + min + ":" + sec;
+            alterneren = 0;
+        } else {
+            document.klok.display.value = uur + " " + min + " " + sec;
+            alterneren = 1;
+        }
+
+        nu = new Date();
+        uur = nu.getHours();
+        min = nu.getMinutes();
+        sec = nu.getSeconds();
+        setTimeout("showKlok()", 1000);
+    }
+    </script>
+
+</head>
+<body onload="showKlok();">
+    <div>
+        <a href="Javascript:showMedia();">
+            <img src="images/ipad.jpg" id="media" alt="">
+        </a>
+    </div>
+</body>
+</html>
