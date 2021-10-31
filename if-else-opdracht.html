@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else opdracht</title>
+</head>
+<body>
+    <script>
+       doorgaan = confirm("Opgave 55: heeft u een creditcard?");
+        if (doorgaan == true) {
+            alert("Welkom bij nl bankings");
+        } else {
+            alert("Totziens.");
+            exit;
+        }
+        if (doorgaan == true) {
+            leeftijd = prompt('Wat is je leeftijd?');
+            if (leeftijd < 18) {
+                alert("Je mag geen geld lenen.");
+                exit;
+            }
+            if (leeftijd > 17) {
+                leerplicht = true;
+            } else {
+                leerplicht = false;
+            }
+        }
+        if (doorgaan && leerplicht) {
+            alert("Je mag 1000 euro lenen.");
+        } else {
+            alert("Je mag 500 euro lenen.");
+        }
+    </script>
+</body>
+</html>
