@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Methodes</title>
+</head>
+<body>
+    <script>
+        var maanden = new Array('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december');
+        var weekdag = new Array('zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag');
+        var vandaag = new Date();
+        var jaar = vandaag.getFullYear();
+        vandaag.setHours(0);
+        document.write("<br>Vandaag is: " + vandaag);
+        var dag = new Date();
+        var dagen = dag.getDay();
+        document.write("<br>Vandaag is: " + weekdag[6] + dag + maanden[9]);
+    </script>
+</body>
+</html>
