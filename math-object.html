@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        var mijnArray = new Array(3.51, 3.50, 3.49, -3.55, -3.50, -3.49);
+        document.write('<br> Hoogste element in mijnArray is: ' + Math.max.apply(null, mijnArray));
+        document.write('<br> Laagste element in mijnArray is: ' + Math.min.apply(null, mijnArray));
+        for (i = 0; i < mijnArray.length; i++) {
+            mijnArray[i] = Math.round(mijnArray[i]);
+        }
+        document.write('<br>Afgeronde elementen: ' + mijnArray);
+        document.write('<br>Vul mijnArray met willekeurige getallen');
+        for (x = 0; x < mijnArray.length; x++) {
+            mijnArray[x] = Math.floor((Math.random() * 10));
+            document.write('<br>' + mijnArray[x]);
+        }
+    </script>
+</body>
+</html>
