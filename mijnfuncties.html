@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn functies</title>
+    <script src="mijnfuncties.js"></script>
+    <!--Dit script werkt met functies-->
+    <!--Auteur: ****-->
+    <script>
+        function verdubbel(inputgetal) {
+            outputgetal = inputgetal * 2;
+            return (outputgetal);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        mijngetal = prompt("typ een getal in");
+        resultaat = verdubbel(mijngetal);
+        document.write("<br>Input-getal:" + mijngetal);
+        document.write("<br>Output-getal:" + resultaat);
+        document.write('<br />De dollar koers is ' + dollarKoers());
+        document.write('<br />De euro koers is ' + euroKoers());
+        document.write('<br>100 dollar is ' + dollar_naar_euro(100) + ' euro\'s');
+        document.write('<br>Wissel 100 euro\'s in dollars: ' + wissel(100, 'euro'));
+        document.write('<br>Wissel 20 dollars in euro\'s: ' + wissel(20, 'dollar'));
+        begroeten();
+        afmelden();
+    </script>
+    <form name="form">
+        <input type="text" name="bedrag" placeholder="bedrag in dollars">
+        <input type="button" value="converteren in euro's" onclick="document.write('conversie in euros:' + dollar_naar_euro(document.form.bedrag.value))">
+    </form>
+</body>
+</html>

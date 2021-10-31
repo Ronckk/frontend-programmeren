@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // Globalscope
+        scope = "globaal";
+        bevolking = 1000;
+        document.write("<br>Scope; " + scope + " bevolking is: " + bevolking);
+        function functionScope() {
+            // lokalescope
+            var scope = "lokaal";
+            var bevolking = 10;
+            variabele = true; // deze variabele is hier voor het eerst genoemd
+            document.write("<br>Scope: " + scope + " bevolking is: " + bevolking);
+            document.write("<br>Scope: " + scope + " variable is: " + variabele);
+        }
+        // voer de function uit
+        functionScope();
+        // terug naar globalescope 
+        document.write("<br>Scope: " + scope + " bevolking is: " + bevolking);
+        variabele = false;
+        document.write("<br>Scope: " + scope + " variabele is: " + variabele);
+    </script>
+</body>
+</html>

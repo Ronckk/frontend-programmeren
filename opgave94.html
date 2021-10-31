@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piramide Algoritme</title>
+</head>
+<body>
+    <script>
+        var lengte = parseInt(prompt('Voer getal in:'));
+        piramide = new Array(lengte);
+        for (var i = 0; i <= lengte; i++) {
+            piramide[i] = i;
+        }
+        document.write(piramide);
+        for (var rij = 1; rij <= lengte; rij++) {
+            document.write('<br>');
+            for (var i = 0; i < rij; i++) {
+                document.write(piramide[i]);
+            }
+        }
+    </script>
+</body>
+</html>
